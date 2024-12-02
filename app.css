@@ -1,0 +1,132 @@
+/* Variables CSS */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #e2f0fb;
+  --text-color: #4d4d4d;
+  --background-gradient: linear-gradient(135deg, #e2f0fb, #d1e6f9);
+  --table-header-color: #3b5998;
+  --table-row-odd-color: rgba(255, 255, 255, 0.8);
+  --table-row-even-color: rgba(230, 244, 255, 0.8);
+  --font-family: 'Inter', sans-serif;
+  --border-color: #ddd;
+  --border-radius: 8px;
+  --transition-time: 0.3s;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary-color);
+  color: white;
+  border-bottom: 5px solid #3178b6;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+}
+
+/* Estilos modernos para h2 */
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: width var(--transition-time);
+}
+
+h2:hover::after {
+  width: 100%;
+}
+
+/* Sombra ligera para destacar el texto */
+h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Estilo para las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+  background-color: var(--table-header-color);
+  color: white;
+  padding: 12px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--table-row-odd-color);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--table-row-even-color);
+}
+
+td {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+}
+
+/* Efecto hover con color de fondo claro */
+tr:hover {
+  background-color: #929292; /* Fondo azul claro */
+  color: #000000; /* Texto azul oscuro para buen contraste */
+  transition: background-color var(--transition-time), color var(--transition-time);
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
