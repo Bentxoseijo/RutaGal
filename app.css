@@ -1,4 +1,3 @@
-/* Variables CSS */
 :root {
   --primary-color: #4a90e2;
   --secondary-color: #e2f0fb;
@@ -115,10 +114,10 @@ td {
 }
 
 /* Efecto hover con color de fondo claro */
-tr:hover {
-  background-color: #929292; /* Fondo azul claro */
-  color: #000000; /* Texto azul oscuro para buen contraste */
-  transition: background-color var(--transition-time), color var(--transition-time);
+/* Cambia el color de fondo al pasar el cursor */
+tbody tr:hover {
+  background-color: #cce7ff; /* Azul claro */
+  color: #003366; /* Color de texto para mejor contraste */
 }
 /* Responsiveness */
 @media (max-width: 768px) {
